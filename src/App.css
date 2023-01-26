@@ -1,38 +1,211 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.home {
+  background: rgba(0, 0, 0, 0.7) url('/src/Images/bg.jpg');
+  background-blend-mode: darken;
+  height: 50rem;
+  background-size: cover;
   flex-direction: column;
+}
+
+#navbar{
+ z-index: 0;
+}
+h1 {
+  color: white;
+  line-height: 5rem;
+  margin-bottom: 2rem;
+  font-size: 4.8rem;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.logo {
+  height: 50px;
+  width: 100px;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.buton {
+  text-align: center;
+  width: 100%;
+}
+
+
+/* ------------------card ------------------- */
+#container {
+  box-shadow: 0 15px 30px 1px grey;
+  background: rgba(255, 255, 255, 0.90);
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5em auto;
+  height: 550px;
+  width: 700px;
+}
+
+.detail {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  padding: 10px;
+  height: 100%;
+  float: left;
+  width: 60%;
+}
+
+#container .detail h1 {
+  font-family: 'Bebas Neue', cursive;
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  color: #344055;
+  margin: 0;
+}
+
+
+#container .detail .information {
+  font-size: 16px;
+  font-family: 'EB Garamond', serif;
+  text-align: left;
+  color: #7d7d7d;
+  margin: 0;
+
+}
+
+.product-image {
+  transition: all 0.3s ease-out;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  float: right;
+  width: 40%;
+  display: inline-block;
+}
+
+#container img {
+  width: 100%;
+  height: 80%;
+  margin-top: 45px;
+}
+
+.emoji {
+  font-size: 40px;
+}
+
+input {
+  cursor: ew-resize;
+}
+
+
+/*------------ card css end here ------------- */
+
+
+/*----------- character tabular css start here -------------- */
+#table {
+  box-shadow: 0 15px 30px 1px grey;
+  background: rgba(255, 255, 255, 0.90);
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  /* margin: 5em auto; */
+  height: 100%;
+  width: 100%;
+}
+
+#heading {
+  height: 60px;
+  /* font-family: 'Bebas Neue', cursive; */
+  position: relative;
+  font-size: 30px;
+  color: red;
+  background-color: #212529;
+
+}
+
+#info {
+  font-size: 25px;
+  font-family: 'EB Garamond', serif;
+  text-align: left;
+  color: #344055;
+
+
+}
+
+.image {
+  height: 120px;
+  width: 150px;
+  cursor: pointer;
+}
+
+/* modal  */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.modal-content img {
+  width: 98%;
+  height: auto;
+}
+
+.modal-content button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+/*----------- character tabular css end here -------------- */
+@media only screen and (max-width: 700px) {
+  html {
+    width: 100vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    text-align: center;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  #container {
+    height: 700px;
   }
 }

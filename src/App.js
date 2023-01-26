@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Navbar from "./component/Navbar";
+import Series from "./component/Series";
+import Container from "./component/Container";
+import { useState } from "react";
+import { useEffect } from "react";
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://demo.tech2edge.co/samples/data-sg")
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => console.log(error));
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Series data={data} />} />
+        <Route exact path="/character" element={<Container />} />
+      </Routes>
     </div>
   );
 }
