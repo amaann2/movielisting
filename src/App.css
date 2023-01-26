@@ -145,8 +145,9 @@ input {
   width: 150px;
   cursor: pointer;
 }
+/*----------- character tabular css end here -------------- */
 
-/* modal  */
+/* ---------modal start here -----------------  */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -188,10 +189,9 @@ input {
   font-size: 16px;
   cursor: pointer;
 }
+/* --------------------modal end here ------------------- */
 
 
-
-/*----------- character tabular css end here -------------- */
 @media only screen and (max-width: 750px) {
   html {
     width: 100vw;
