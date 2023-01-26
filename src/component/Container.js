@@ -29,8 +29,8 @@ const Container = () => {
             IMAGE
           </div>
         </div>
-        {data.map((character) => (
-          <div className="row border  border-dark" id="info">
+        {data.map((character ,id) => (
+          <div className="row border  border-dark" id="info" key={id}>
             <div className="col-3 border  d-flex justify-content-center align-items-center  border-light">
               {character.name}
             </div>
